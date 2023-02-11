@@ -1,0 +1,87 @@
+✌️1✌️ Install nextjs 13: npx create-next-app@latest -e with-tailwindcss my-project-name
+
+✌️2✌️ Install Sanity 3: in root folder: npm create snaity@latest -- --coupon sonny2022
+
+✌️3✌️ -project name -- default dataset -- ouput path enter -- blog schema -- want typescript
+
+✌️4✌️ install next-sanity npm: in root folder: npm install next-sanity @portabletext/react @sanity/image-url
+
+✌️5✌️ compare both config.js next and sanity
+
+✌️6✌️ then move sanity/vision,sanity,styled-components dependency to next dependencies
+
+✌️7✌️ '@sanity/eslint-config-studio' to nextjs deve-dependencies
+
+✌️8✌️  grap the 'schema folder', 'sanity.cli.ts', 'tsconfig.json' to root folder
+
+✌️9✌️ Delete installed sanity folder from root derictory
+
+✌️10✌️ Merging backend with frontend done
+
+✌️11✌️ create .env.local file include there: 
+        NEXT_PUBLIC_SANITY_PROJECT_ID = (from sanity.config.ts)
+        NEXT_PUBLIC_SANITY_DATASET = (from sanity.config.ts)
+        NEXT_PUBLIC_SANITY_API_VERSION = your_value_goes_here
+
+✌️12✌️sanity.config file edit:
+        const projectId: from process.env.projectid!; ! for type    
+        const dataset: from .env.local
+        in defineConfig({
+            basePat:'/studio',
+            name:'PARVEZ_Content_Studio',
+            title:'PARVEZ Content studio',
+            projectId,
+            dataset
+            });
+        
+        note: projectId and dataset const like: projectId,dataset
+        
+✌️13✌️ also set projectId and dataset into sanity.cli.ts
+
+✌️14✌️ app/studio/[[...index]]/page.tsx create this for studio
+
+✌️15✌️ copy and past from sanity/studio/preview npm page
+
+✌️16✌️ create head.tsx in the same directory and remove 'as default' from NextStudioHead
+
+✌️17✌️ create loading.tsx and copy code from npm...
+
+✌️17✌️ lets try on localhost:3000/studio
+
+✌️✌️✌️ add cross origin for localhost: 300: hit continue
+        add cross origin
+        authenticaion
+        login    
+
+✌️✌️✌️ create theme.ts in root directory. content will find on sanity website.
+
+✌️✌️✌️ Then custo header bar then logo
+
+✌️✌️✌️ Customisation of layout of the website
+
+✌️✌️✌️ create lib folder on root folder 
+        here,
+        sanity.client.ts
+        sanity.preview.ts
+
+✌️✌️✌️ pages/api: preview.ts (delete hello.ts or something else);
+        exitpri
+
+✌️✌️✌️ Go to (user)/page.tsx: check preview mode
+
+✌️✌️✌️ create a groq query
+
+✌️✌️✌️ previewsuspense file on component
+        then import it into homepage for previewData
+
+✌️✌️✌️ map on bloglist
+
+✌️✌️✌️ make a helper function for Image url on lib folder;
+
+✌️✌️✌️ add ClientSideRoute connect with BlogList for Link of BlogList
+
+✌️✌️✌️ sanity.config.ts add plugin for preview on browser 
+
+        add structure file into root folder
+        
+        install sanity.plugin-iframe
